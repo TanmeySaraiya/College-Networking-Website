@@ -1,0 +1,105 @@
+form {
+  text-align: center;
+  color: black;
+  font-family: 'Roboto Slab', serif;
+}
+
+label {
+  display: block;
+  letter-spacing: 4px;
+  padding-top: 30px;
+  text-align: center;
+}
+
+.label-text {
+  color: black;
+  cursor: text;
+  font-size: 20px;
+  line-height: 20px;
+  text-transform: uppercase;
+  transform: translateY(-34px);
+  transition: all 0.3s;
+}
+
+label > input {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px solid #4A4A4A;
+  color: black;
+  font-size: 36px;
+  letter-spacing: -1px;
+  outline: 0;
+  padding: 5px 20px;
+  text-align: center;
+  transition: all 0.3s;
+  width: 200px;
+}
+
+textarea {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px solid #4A4A4A;
+  color: black;
+  font-size: 26px;
+  letter-spacing: -1px;
+  outline: 0;
+  padding: 5px 10px;
+  text-align: center;
+  transition: all 0.3s;
+  width: 200px;
+  height: 100px;
+}
+
+label > input:focus, textarea:focus {
+  width: 400px;
+}
+
+
+label > input + .label-text, textarea + .label-text {
+    color: black;
+    font-size: 13px;
+    transform: translateY(-74px);
+}
+
+label > input:valid + .label-text, textarea:valid + .label-text {
+  font-size: 13px;
+  transform: translateY(-74px);
+}
+
+button{
+  background: black;
+  color:#fff;
+  border:none;
+  position:relative;
+  height:60px;
+  font-size:1.6em;
+  padding:0 2em;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+  margin-top: 20px;
+}
+button:hover{
+  background:#fff;
+  color: black;
+}
+button:before,button:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: black;
+  transition:400ms ease all;
+}
+button:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+button:hover:before,button:hover:after{
+  width:100%;
+  transition:800ms ease all;
+}

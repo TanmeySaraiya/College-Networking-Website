@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HOME PAGE</title>
+	<link rel="stylesheet" type="text/css" href="menu.css">
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<!-- <link rel="stylesheet" type="text/css" href="about.css"> -->
+	<link rel="stylesheet" type="text/css" href="feedback.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+	<link href='http://fonts.googleapis.com/css?family=Oleo+Script' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/css?family=Merienda" rel="stylesheet">
+
+
+	<script src="http://maps.google.com/maps/api/js?sensor=false">
+	</script>
+
+
+</head>
+<body>
+
+	<div id="container" data-XSwitch>
+
+	  	<div class="sections">
+	      <div class="section" id="section0">
+	      	<div class="header">
+
+						<div class="vertical-text">
+							<h3>Scroll Down</h3>
+							<svg height="210" width="500">
+								<line x1="0" y1="0" x2="200" y2="0" style="stroke:rgb(255,255,255);stroke-width:2" />
+							</svg>
+						</div>
+
+						<label>
+							<input type='checkbox'>
+								<span class='menu'> <span class='hamburger'></span> </span>
+								<ul>
+									<li> <a href='register.html'>Register</a> </li>
+									<li> <a href='newsfeed.php'>NewsFeed</a> </li>
+									<li> <a href='about_us.html'>About</a> </li>
+									<li> <a href='fest.html'>Fest</a> </li>
+								</ul>
+						</label>
+
+		  		<div class="info">
+
+					<h1>The Social Network.</h1>
+		  		<h4>Where questions are answered ... </h4>
+		  		</div>
+			</div>
+	    </div>
+
+	    <div class="section" id="section1">
+	    	<div id="one" class="container">
+					<h1>About The Website...</h1>
+					<div class="abt-website">
+						<p>THE NETWORKS's mission is to share and grow the world’s knowledge. A vast amount of the knowledge that would be valuable to many people is currently only available to a few — either locked in people’s heads, or only accessible to select groups. We want to connect the people who have knowledge to the people who need it, to bring together people with different perspectives so they can understand each other better, and to empower everyone to share their knowledge for the benefit of the rest of the world.
+						</p>
+						<p>The Network has only one version of each question. It doesn’t have a left wing version, a right wing version, a western version, and an eastern version. The Network brings together people from different worlds to answer the same question, in the same place — and to learn from each other. We want The Network to be the place to voice your opinion because The Network is where the debate is happening. We want the The Network answer to be the definitive answer for everybody forever.</p>
+						<p>The Network has content you will feel good about having read. The Network helps you understand why the world works the way it does, why people behave the way they do, and what we can all do to make the world better. The Network provides a personalized feed of insightful answers to questions you hadn’t realized you should ask.</p>
+
+					</div>
+
+				</div>
+	    </div>
+
+	    <div class="section" id="section2">
+	      	<div id="two" class="container">
+						<h1>Feedback</h1>
+						<form action="feedback.php" method="POST">
+						  <label>
+						    <input type="text" required />
+						    <div class="label-text">First name</div>
+						  </label>
+						  <label>
+						    <input type="email" required />
+						    <div class="label-text">E-Mail</div>
+						  </label>
+							<label>
+								<div class="label-text">Message</div>
+						    <textarea name="name" rows="8" cols="50" required ></textarea>
+						  </label>
+							<button type="submit" onclick="feedback1()" >Submit</button>
+						</form>
+					</div>
+	    </div>
+
+	    <div class="section" id="section3">
+	      <div id="three" class="container">
+	        <div id="mapPlaceholder"></div>
+					<div class="info">
+						<h4>Xaviers Institute of Engineering</h4>
+						<p>Opposite S.L.Raheja Hospital,</p>
+						<p>Mahim Causeway,</p>
+						<p>Mahim (West), Mumbai, </p>
+						<p>Maharashtra 400016</p>
+					</div>
+					<div class="footer">
+						<p>You can't expect an answer until you ask a question!</p>
+					</div>
+				</div>
+	    </div>
+
+
+
+	  </div>
+	</div>
+	<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script src="main.js"></script>
+	<script src="menu.js"></script>
+ 	<!-- <script src="//code.jquery.com/jquery-2.2.3.min.js"></script> -->
+	<script src="XSwitch.js"></script>
+
+	<script type="text/javascript">
+		function feedback1(){
+			alert ("Your Feedback has been considered");
+		}
+
+	</script>
+
+</body>
+</html>

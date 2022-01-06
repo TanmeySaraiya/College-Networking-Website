@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Register</title>
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+
+		<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Merienda" rel="stylesheet">
+
+		<link rel="stylesheet" type="text/css" href="register.css">
+
+	</head>
+	<body>
+
+	 <div id="lp-register">
+		 <div class="container wrapper">
+			 <div class="reg-form-container">
+
+				 <div class="reg-options">
+					 <ul class="nav nav-tabs">
+						 <li><a href="#" onclick="reg()" id="reg_act" >Register</a></li>
+						 <li><a href="#" onclick="log()" id="log_act" >Login</a></li>
+					 </ul>
+				 </div>
+
+				 <!--Registration Form Contents-->
+					 <div class="tab-pane" id="register">
+						 <h2>Register</h2>
+
+						 <form name="registration_form" id="registration_form" action="registeruser.php" method="post" enctype="multipart/form-data">
+
+							 <input id="firstname" class="form-control" type="text" name="firstname" placeholder="First name">
+
+							 <input id="lastname" class="form-control" type="text" name="lastname" placeholder="Last name">
+
+							 <input id="email" class="form-control-100" type="text" name="email" placeholder="Your Email">
+
+							 <input id="password" class="form-control-100" type="password" name="password" placeholder="Password">
+
+							 <label for="acd_year"></label>
+							 <select class="form-control" id="acd_year" name="acdyear">
+								 <option value="acd_year">Academic year</option>
+								 <option value="1">FE</option>
+								 <option value="2">SE</option>
+								 <option value="3">TE</option>
+								 <option value="4">BE</option>
+							 </select>
+
+							 <label for="branch"></label>
+							 <select class="form-control" id="branch" name="branch">
+								 <option value="branch">Branch</option>
+								 <option value="COMPS">COMPS</option>
+								 <option value="IT">IT</option>
+								 <option value="EXTC">EXTC</option>
+							 </select>
+
+							 <input class="form-control" class="btn btn-primary" type="file" name="imag" id="imag">
+
+
+								<p class="birth"><strong>Date of Birth</strong></p>
+							 <label for="month"></label>
+							 <select class="form-control" id="day" name="day">
+								 <option value="Day">Day</option>
+								 <option value=01>1</option>
+								 <option value=02>2</option>
+								 <option value=03>3</option>
+								 <option value=04>4</option>
+								 <option value=05>5</option>
+								 <option value=06>6</option>
+								 <option value=07>7</option>
+								 <option value=08>8</option>
+								 <option value=09>9</option>
+								 <option value=10>10</option>
+								 <option value=11>11</option>
+								 <option value=12>12</option>
+								 <option value=13>13</option>
+								 <option value=14>14</option>
+								 <option value=15>15</option>
+								 <option value=16>16</option>
+								 <option value=17>17</option>
+								 <option value=18>18</option>
+								 <option value=19>19</option>
+								 <option value=20>20</option>
+								 <option value=21>21</option>
+								 <option value=22>22</option>
+								 <option value=23>23</option>
+								 <option value=24>24</option>
+								 <option value=25>25</option>
+								 <option value=26>26</option>
+								 <option value=27>27</option>
+								 <option value=28>28</option>
+								 <option value=29>29</option>
+								 <option value=30>30</option>
+								 <option value=31>31</option>
+							 </select>
+							 <label for="month"></label>
+							 <select class="form-control" id="month" name="month">
+								 <option value="month">Month</option>
+								 <option value=01>Jan</option>
+								 <option value=02>Feb</option>
+								 <option value=03>Mar</option>
+								 <option value=04>Apr</option>
+								 <option value=05>May</option>
+								 <option value=06>Jun</option>
+								 <option value=07>Jul</option>
+								 <option value=08>Aug</option>
+								 <option value=09>Sep</option>
+								 <option value=10>Oct</option>
+								 <option value=11>Nov</option>
+								 <option value=12>Dec</option>
+							 </select>
+							 <label for="year"></label>
+							 <select class="form-control" id="year" name="year">
+								 <option value="year">Year</option>
+								 <option>2000</option>
+								 <option>1999</option>
+								 <option>1998</option>
+								 <option>1997</option>
+								 <option>1996</option>
+								 <option>1995</option>
+							 </select>
+							 <div class="form-group gender">
+								 <label class="radio-inline">
+									 <input type="radio" name="gender" checked="">Male
+								 </label>
+								 <label class="radio-inline">
+									 <input type="radio" name="gender">Female
+								 </label>
+							 </div>
+									 <input id="city" class="form-control input-group-lg reg_name" type="text" name="city" placeholder="Your city">
+						<button class="btn btn-primary" type="submit" name="submit">Register Now</button>
+						 </form>
+						 <p><a href="#" onclick="log()" >Already have an account?</a></p>
+
+						 <p> <a href="index.html" id="home" >HOME</a> </p>
+					 </div>
+
+					 <!--Login-->
+					 <div class="tab-pane" id="login">
+						 <h2>Login</h2>
+						 <p class="text-muted">Log into your account</p>
+
+						 <!--Login Form-->
+						 <form name="Login_form" id="Login_form" action="login.php" method="post">
+									 <input id="my-email" class="form-control-100" type="text" name="email" placeholder="Your Email">
+									 <input id="my-password" class="form-control-100" type="password" name="password" placeholder="Password">
+						 <button class="btn btn-primary" type="submit" name="submit">Login Now</button>
+						 </form><!--Login Form Ends-->
+						 <p><a href="#" onclick="reg()">New Member?</a></p>
+
+						 <p> <a href="index.html" id="home" >HOME</a> </p>
+					 </div>
+
+			 </div>
+		 </div>
+	 </div>
+
+  <script src="register.js"></script>
+
+	</body>
+</html>

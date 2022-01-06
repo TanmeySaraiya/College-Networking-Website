@@ -1,0 +1,106 @@
+#section0 label {
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.8em;
+  line-height: 1.6;
+}
+
+#section0 label .menu {
+  position: absolute;
+  left: 5%;
+  top: 5%;
+  z-index: 100;
+  width: 2.5em;
+  height: 2.5em;
+  background: #FFF;
+  border-radius: 50% 50% 50% 50%;
+  transition: .5s ease-in-out;
+  box-shadow: 0 0 0 0 #FFF, 0 0 0 0 #FFF;
+  cursor: pointer;
+}
+
+#section0 label .hamburger {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  width: .75em;
+  height: 2px;
+  background: black;
+  display: block;
+  transform-origin: center;
+  transition: .5s ease-in-out;
+}
+
+#section0 label .hamburger:after, label .hamburger:before {
+  transition: .5s ease-in-out;
+  content: "";
+  position: absolute;
+  display: block;
+  width: 1em;
+  height: 100%;
+  background: black;
+}
+
+#section0 label .hamburger:before { top: -.4em; }
+
+#section0 label .hamburger:after { bottom: -.4em; }
+
+#section0 label input { display: none; }
+
+#section0 label input:checked + .menu {
+  box-shadow: 0 0 0 100vw #FFF, 0 0 0 100vh #FFF;
+  border-radius: 0;
+}
+
+#section0 label input:checked + .menu .hamburger {
+  width: 1em;
+  transform: rotate(45deg);
+}
+
+#section0 label input:checked + .menu .hamburger:after {
+  transform: rotate(90deg);
+  bottom: 0;
+}
+
+#section0 label input:checked + .menu .hamburger:before {
+  transform: rotate(90deg);
+  top: 0;
+}
+
+#section0 label input:checked + .menu + ul { opacity: 1; }
+
+#section0 label ul {
+  z-index: 200;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: .25s 0s ease-in-out;
+  list-style: none;
+}
+
+#section0 label a {
+  margin-bottom: 1em;
+  display: block;
+  color: black;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 950px)  {
+  #section0 label .menu {
+    width: 2em;
+    height: 2em;
+  }
+
+  #section0 label .hamburger {
+    width: .5em;
+  }
+
+  #section0 label .hamburger:after, label .hamburger:before  {
+    width: .75em;
+  }
+
+  #section0 label input:checked + .menu .hamburger {
+    width: .75em;
+  }
+}

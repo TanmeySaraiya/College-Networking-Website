@@ -1,0 +1,277 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Roboto Slab', serif;
+  overflow-x: hidden;
+}
+
+.parallax {
+  background-image: url("bg.jpg");
+  height: 60vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+
+span img {
+  width: 225px;
+  height: 225px;
+  border-radius: 50%;
+  left: 0;
+  top: 0;
+  transform: translate(30%, -50%);
+  box-shadow: 10px 10px 80px 20px rgba(0, 0, 0, 0.3);
+}
+
+.welcome p {
+  margin: 0;
+  font-family: 'Merienda', cursive;
+  letter-spacing: 0px;
+  font-size: 2.5em;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.9);
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+}
+
+.create_post {
+  height: 5em;
+  width: 100%;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 2em;
+  bottom: 0;
+  position: absolute;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 0;
+}
+
+.btn-primary{
+	background: #27aae1;
+	padding: 7px 25px;
+	border: none;
+	font-size: 16px;
+	border-radius: 4px;
+	color: #fff;
+	position: relative;
+  font-weight: 600;
+  outline: none;
+  border-radius: 30px;
+  width: 100px;
+  height: 50px;
+  margin: 0 15px;
+
+}
+
+.btn-primary:hover{
+  background: #149AC9;
+  transition: all 1s;
+}
+
+.something {
+  font-size: 2em;
+  font-style: italic;
+  width: 50%;
+  position: relative;
+}
+
+.create_post form {
+  width: 130%;
+  float: left;
+  position: relative;
+  margin: 0;
+  transform: translate(-30%, 0);
+}
+
+.create_post textarea {
+  background: #fff;
+  color: #939598;
+  border-radius: 3px;
+  box-shadow: none;
+  width: 35%;
+  height: 4em;
+  border: 1px solid #f1f2f2;
+  /* align-items: center; */
+  padding: .2em;
+  /* display: flex;
+  flex-direction: row; */
+  /* transform: translate(150%, -40%); */
+}
+
+/*#attach_btn {
+  transform: translate(500%, -90%);
+
+}*/
+
+#post_btn {
+  /* transform: translate(550%, -90%); */
+  float: right;
+  margin: 1em auto;
+
+}
+
+
+.flex-container {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  padding: 0 10px;
+}
+
+.flex-container > div {
+  /* background-color: teal; */
+  color: black;
+  width: 100px;
+  margin: 10px;
+  padding: 0 50px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+
+#one {
+  max-height: 150vh;
+  padding: 0;
+  margin-top: 2em;
+  background: rgba(0, 0, 0, 0.9);
+  box-shadow: 5px 10px 20px 0px #888888;
+  border-radius: 4px;
+  font-size: 1.75em;
+}
+
+#one h5 {
+  margin: auto 2em;
+  font-weight: lighter;
+  text-align: left;
+}
+
+#one a {
+  text-decoration: none;
+  color: white;
+  padding: 0;
+  margin: 0;
+  transition: .3s;
+}
+
+#one a:hover {
+  text-decoration: underline;
+  color: gray;
+  transition: .3s;
+}
+
+#pc-form textarea {
+  width: 75%;
+  height: 3em;
+  font-size: .75em;
+  padding: .2em;
+}
+
+#pc-form button {
+  float: right;
+  margin: 1em auto;
+}
+
+
+@media screen and (max-width: 1250px) {
+  .something {
+    font-size: 1.3em;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .parallax {
+    height: 100vh;
+  }
+
+  #pc-form textarea {
+    width: 100%;
+    height: 5em;
+    font-size: .5em;
+  }
+
+  #pc-form button {
+    float: none;
+    margin: 1em auto;
+  }
+
+}
+
+@media screen and (max-width: 650px) {
+  .create_post {
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .create_post .something {
+    margin-bottom: 1em;
+  }
+
+  .create_post form {
+    position: relative;
+    width: 90%;
+    transform: translate(0, 0);
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+  }
+
+  .create_post textarea {
+    width: 75%;
+    height: 2em;
+    margin: .5em;
+    grid-column: 1/5;
+  }
+
+
+  #post_btn {
+    float: none;
+    grid-column: 5/6;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .flex-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #one, #two {
+    width: 95%;
+  }
+
+  #two {
+    transform: translate(-10%, 0);
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .create_post {
+    height: 50%;
+  }
+
+  .welcome p {
+    margin: auto;
+  }
+
+  .create_post .something {
+    width: 100%;
+  }
+
+  .create_post form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .create_post textarea {
+    height: 15%;
+  }
+
+}
